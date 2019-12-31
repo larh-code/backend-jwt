@@ -1,10 +1,9 @@
-const express = require('express');
-const app = express();
+const app = require('./app');
+require('./database');
 
-app.get('/', (req, res) => {
-    res.send('Hello world');
-})
+async function init() {
+    await app.listen(3000);
+    console.log('server start!');
+}
 
-app.listen(3000,() => {
-    console.log('start server');
-})
+init();
