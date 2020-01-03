@@ -1,8 +1,8 @@
 const app = require('./app');
 require('./database');
 
-async function init() {
-    await app.listen(3000);
+function init() {
+    app.listen(3000);
     console.log('server start!');
 }
 
